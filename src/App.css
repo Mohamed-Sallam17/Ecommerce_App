@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none !important;
+  color: 000;
+}
+li{
+  list-style: none;
+}
+
+
+/* Start Header */
+.navbar.bg-body-tertiary {
+    background-color: #fff7d4 !important;
+}
+.navbar-nav {
+    gap: 10px;
+}
+.navbar-nav a{
+  color: #000 !important;
+}
+
+
+/* start products */
+.product-cardimg {
+    height: 18rem;
+}
+
+.product-card {
+  width: 300px;
+}
+
+.swiper-slide {
+  width: auto !important;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-slide {
+  width: calc((100% - 60px) / 4); /* 4 عناصر + مسافات */
+}
+
+@media (max-width: 1024px) {
+  .swiper-slide {
+    width: calc((100% - 40px) / 2); /* 2 عناصر */
+  }
+}
+
+@media (max-width: 640px) {
+  .swiper-slide {
+    width: 100%; /* عنصر واحد */
+  }
+}
