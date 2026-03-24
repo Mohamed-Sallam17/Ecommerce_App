@@ -4,7 +4,6 @@ const apiUrl = "https://dummyjson.com/products";
 export const fetchProducts = createAsyncThunk('productSlice/fetchProducts', async()=>{
     const result = await fetch(apiUrl);
     const data = await result.json();
-    console.log(data.products)
     return data.products;
 })
 

@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Container, Row } from "react-bootstrap";
 import { fetchCategories } from "../rtk/slices/categories-slices";
+import { Link, useParams } from "react-router-dom";
 
 function Products(){
     const dispatch = useDispatch()
@@ -13,6 +14,8 @@ function Products(){
     useEffect(()=>{
         dispatch(fetchProducts()) 
     },[])
+
+
     return (
             <Container>
                 <h2 className="my-5 text-center">Products</h2>
@@ -28,11 +31,11 @@ function Products(){
                         {products.map((product) => (
                             <SwiperSlide key={product.id}>
                                 <Card className="product-card" style={{ width: "300px" }}>
-                                    <div className="product-cardimg">
+                                    <Link className="product-cardimg">
                                         <Card.Img className="h-100" variant="top" src={product.images[0]} /> 
-                                    </div>
+                                    </Link>
                                     <Card.Body>
-                                    <Card.Title>{product.title}</Card.Title>
+                                    <Link>{product.title}</Link>
                                     <Card.Text>{product.price}$</Card.Text>
                                     <Button variant="primary">Add To Cart </Button>
                                     </Card.Body>

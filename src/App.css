@@ -1,3 +1,6 @@
+:root{
+  --primary-color: #1ca9ff;
+}
 *{
   margin: 0;
   padding: 0;
@@ -5,7 +8,8 @@
 }
 a{
   text-decoration: none !important;
-  color: 000;
+  color: #000 ;
+  font-weight: 500;
 }
 li{
   list-style: none;
@@ -22,7 +26,26 @@ li{
 .navbar-nav a{
   color: #000 !important;
 }
-
+.navbar form{
+  background-color: #fff;
+  border: 2px solid var(--primary-color);
+  padding: 10px;
+  border-radius: 16px;
+}
+.navbar form input {
+    width: 300px;
+    border: none;
+}
+.navbar form input:focus{
+  outline: none;
+}
+.navbar form button{
+  border: none;
+  line-height: 1;
+}
+.navbar form button svg{
+  fill: var(--primary-color);
+}
 
 /* start products */
 .product-cardimg {
@@ -53,4 +76,15 @@ li{
   .swiper-slide {
     width: 100%; /* عنصر واحد */
   }
+}
+
+
+/* start categoties page */
+.categories-list {
+  grid-template-columns: repeat(4, 1fr);
+}
+.categories-list a {
+  color: #000;
+  font-size: 24px;
+  background-color: #bbb;
 }
